@@ -1,9 +1,7 @@
 <template>
-  <div v-if="toggle">true</div>
-  <div v-else>false</div>
-  <button @click="onToggle">click</button>
   <div class="container">
     <h2>To-do List</h2>
+
     <form @submit.prevent="onSubmit">
       <div class="d-flex">
         <div class="flex-grow-1 mr-2">
