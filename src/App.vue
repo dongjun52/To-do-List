@@ -18,7 +18,7 @@
           </button>
         </div>
       </div>
-      <div v-if="hasError">This field cannot be empty</div>
+      <div v-if="hasError" style="color:red">This field cannot be empty</div>
     </form>
 
     <div v-for="todo in todos" :key="todo.id" class="card mt-2">
@@ -47,6 +47,7 @@ export default {
           id: Date.now(),
           subject: todo.value,
         });
+        hasError.value = false;
       }
     };
 
